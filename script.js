@@ -13,18 +13,9 @@ function nbhorloge () {
     now.push(date.getMinutes())
     now.push(date.getSeconds())
 
-    return now
+    heure.style.transform = `rotate(${now[0]*30}deg)`;
+    minute.style.transform = `rotate(${now[1]*6}deg)`;
+    seconde.style.transform = `rotate(${now[2]*6}deg)`; 
 }  
 
-
-let nowOk = nbhorloge()
-
-console.log(nowOk);
-
-
-// Donner Angle <- heure locale
-
-heure.style.transform = `rotate(${nowOk[0]*30}deg)`;
-minute.style.transform = `rotate(${nowOk[1]*6}deg)`;
-seconde.style.transform = `rotate(${nowOk[2]*6}deg)`; 
-
+setInterval(nbhorloge, 100)

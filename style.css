@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(226, 241, 252);
 }
 
 #cadre {
@@ -11,8 +11,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 3px solid black;
+    border: 3px solid rgb(172, 180, 226);
     border-radius: 100%;
+    box-shadow: 3px 3px 1px 3px rgb(170, 170, 197);
+
 }
 
 #cadre::after {
@@ -20,8 +22,8 @@ body {
     background-color: black;
     position: absolute;
     margin: auto;
-    width: 1px;
-    height: 1px;
+    width: 20px;
+    height: 20px;
     top: 0;
     left: 0;
     right: 0;
@@ -33,20 +35,21 @@ body {
 
 #heure {
     position: absolute;
-    background-color: black;
-    width: 10px;
-    height: 250px;
-    top: 0%;
+    background-color: rgb(87, 136, 201);
+    width: 7px;
+    height: 240px;
+    top: 3%;
     right: 50%;
     transform-origin: bottom left;
+    border-radius: 90px 90px 0px 0px;
 }
 
 #minute {
     position: absolute;
-    background-color: black;
-    width: 5px;
-    height: 250px;
-    top: 0%;
+    background-color: rgb(69, 38, 206);
+    width: 3px;
+    height: 240px;
+    top: 3%;
     right: 50%;
     transform-origin: bottom left;
 }
@@ -54,9 +57,9 @@ body {
 #seconde {
     position: absolute;
     background-color: black;
-    width: 2px;
-    height: 250px;
-    top: 0%;
+    width: 1px;
+    height: 240px;
+    top: 3%;
     right: 50%;
     transform-origin: bottom right;
 }
