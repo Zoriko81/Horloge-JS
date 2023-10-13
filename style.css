@@ -36,10 +36,9 @@ body {
     background-color: black;
     width: 10px;
     height: 250px;
-    top: 50%;
+    top: 0%;
     right: 50%;
-    transform-origin: top left;
-    transform: rotate(90deg);
+    transform-origin: bottom left;
 }
 
 #minute {
@@ -47,10 +46,9 @@ body {
     background-color: black;
     width: 5px;
     height: 250px;
-    top: 50%;
+    top: 0%;
     right: 50%;
-    transform-origin: top left;
-    transform: rotate(30deg);
+    transform-origin: bottom left;
 }
 
 #seconde {
@@ -58,10 +56,9 @@ body {
     background-color: black;
     width: 2px;
     height: 250px;
-    top: 50%;
+    top: 0%;
     right: 50%;
-    transform-origin: top left;
-    transform: rotate(60deg);
+    transform-origin: bottom right;
 }
 
 
