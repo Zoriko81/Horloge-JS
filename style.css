@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(226, 241, 252);
+    background-color: rgb(255, 255, 255);
 }
 
 #cadre {
@@ -11,26 +11,56 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 3px solid rgb(172, 180, 226);
+    border: 10px solid rgb(0, 111, 155);
     border-radius: 100%;
-    box-shadow: 3px 3px 1px 3px rgb(170, 170, 197);
-
+    box-shadow: 3px 3px 1px 3px rgb(0, 0, 0);
 }
 
 #cadre::after {
     content: "";
-    background-color: black;
+    background-color: rgb(53, 64, 126);
     position: absolute;
     margin: auto;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border: 3px solid black;
     border-radius: 100%;
+}
 
+#cadre::before {
+    content: "";
+    background-color: rgba(69, 85, 175, 0.596);
+    position: absolute;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    border: 3px solid rgb(0, 111, 155);
+
+}
+
+#affichageNum {
+    display: flex;
+    position: absolute;
+    top: 57%;
+    left: 41%;
+}
+
+.heureNum, .minuteNum, .secondeNum {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 #heure {
@@ -38,8 +68,8 @@ body {
     background-color: rgb(87, 136, 201);
     width: 7px;
     height: 240px;
-    top: 3%;
-    right: 50%;
+    top: 2%;
+    right: 49%;
     transform-origin: bottom left;
     border-radius: 90px 90px 0px 0px;
 }
@@ -49,8 +79,8 @@ body {
     background-color: rgb(69, 38, 206);
     width: 3px;
     height: 240px;
-    top: 3%;
-    right: 50%;
+    top: 2%;
+    right: 49%;
     transform-origin: bottom left;
 }
 
