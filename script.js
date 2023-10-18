@@ -24,7 +24,7 @@ function nbhorloge () {
 
     heure.style.transform = `rotate(${now[0]*30+(0.5*now[1])}deg)`;
     minute.style.transform = `rotate(${now[1]*6}deg)`;
-    seconde.style.transform = `rotate(${now[2]*6}deg)`;
+    seconde.style.transform = `rotate(${now[2]*6-180}deg)`;
 
     heureNum.innerHTML = `${now[0]}`
     minuteNum.innerHTML = `${now[1]}`
