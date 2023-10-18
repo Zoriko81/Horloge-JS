@@ -1,7 +1,13 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #14222d;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* Cadre */
 #cadre {
     position: absolute;
     margin: auto;
@@ -11,14 +17,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 10px solid rgb(0, 111, 155);
+    border: 3px solid white;
     border-radius: 100%;
-    box-shadow: 3px 3px 1px 3px rgb(0, 0, 0);
+    box-shadow: inset 0 0 2em #57acdb,
+    0 0 2em #57acdb;
 }
 
 #cadre::after {
     content: "";
-    background-color: rgb(53, 64, 126);
+    background-color: white;
     position: absolute;
     margin: auto;
     width: 17px;
@@ -30,80 +37,115 @@ body {
     border-radius: 100%;
 }
 
-#cadre::before {
-    content: "";
-    background-color: rgba(69, 85, 175, 0.596);
-    position: absolute;
-    margin: auto;
-    width: 40px;
-    height: 40px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 100%;
-    border: 3px solid rgb(0, 111, 155);
 
-}
-
+/* Affichage numérique */
 #affichageNum {
     display: flex;
     position: absolute;
-    top: 57%;
-    left: 41%;
+    top: 13%;
+    left: 42%;
+    border: 3px solid black;
+    border-radius: 17px;
+    background-color: aliceblue;
 }
 
 .heureNum, .minuteNum, .secondeNum {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    background-color: aliceblue;
+    width: 50px;
+    height: 40px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    font-size: 1.3em;
 }
 
+.heureNum, .minuteNum {
+    border-right: 1px solid black;
+}
+
+/* Aiguilles */
 #heure {
     position: absolute;
-    background-color: rgb(87, 136, 201);
-    width: 7px;
-    height: 240px;
-    top: 2%;
-    right: 49%;
+    background: linear-gradient(to right, black 0%, black 60%, white 50%, white 0%);
+    width: 15px;
+    height: 170px;
+    top: 15.2%;
+    right: 45.5%;
     transform-origin: bottom left;
-    border-radius: 90px 90px 0px 0px;
+    border-radius: 350px 350px 0px 0px;
 }
 
 #minute {
     position: absolute;
-    background-color: rgb(69, 38, 206);
-    width: 3px;
-    height: 240px;
-    top: 2%;
-    right: 49%;
+    background: linear-gradient(to right, rgb(104, 103, 103) 0%, rgb(104, 103, 103) 60%, white 50%, white 0%);
+    width: 7.5px;
+    height: 190px;
+    top: 11.3%;
+    right: 48.2%;
     transform-origin: bottom left;
+    border-radius: 350px 350px 0px 0px;
 }
 
 #seconde {
     position: absolute;
-    background-color: black;
-    width: 1px;
-    height: 240px;
-    top: 3%;
+    background-color: white;
+    width: 2px;
+    height: 310px;
+    top: 34.6%;
     right: 50%;
-    transform-origin: bottom right;
+    transform-origin: center 25%;
+    border-radius: 350px 350px 0px 0px;
 }
 
+#seconde::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: white;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 50px;
+}
 
+#seconde::after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    width: 5px;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 70px;
+    border-top-left-radius: 50px;
+}
+
+/* Heures sur l'horloge*/
 .nombre {
-    font-size: 3em;;
+    font-size: 3em;
+    color: #39b1fa;
+
 }
 
 #nombre12 {
     position: absolute;
     top: 10px;
     right: 0;
-    left: 220px;
+    left: 215px;
+    bottom: 0;
+}
+
+#nombre1 {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    left: 350px;
+    bottom: 0;
+}
+
+#nombre2 {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    left: 420px;
     bottom: 0;
 }
 
@@ -111,7 +153,23 @@ body {
     position: absolute;
     top: 220px;
     right: 0;
-    left: 450px;
+    left: 440px;
+    bottom: 0;
+}
+
+#nombre4 {
+    position: absolute;
+    top: 330px;
+    right: 0;
+    left: 420px;
+    bottom: 0;
+}
+
+#nombre5 {
+    position: absolute;
+    top: 415px;
+    right: 0;
+    left: 350px;
     bottom: 0;
 }
 
@@ -119,7 +177,23 @@ body {
     position: absolute;
     top: 450px;
     right: 0;
-    left: 240px;
+    left: 225px;
+    bottom: 0;
+}
+
+#nombre7 {
+    position: absolute;
+    top: 415px;
+    right: 0;
+    left: 110px;
+    bottom: 0;
+}
+
+#nombre8 {
+    position: absolute;
+    top: 330px;
+    right: 0;
+    left: 40px;
     bottom: 0;
 }
 
@@ -127,6 +201,22 @@ body {
     position: absolute;
     top: 220px;
     right: 0;
-    left: 10px;
+    left: 5px;
+    bottom: 0;
+}
+
+#nombre10 {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    left: 45px;
+    bottom: 0;
+}
+
+#nombre11 {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    left: 125px;
     bottom: 0;
 }

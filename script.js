@@ -29,6 +29,7 @@ function nbhorloge () {
     heureNum.innerHTML = `${now[0]}`
     minuteNum.innerHTML = `${now[1]}`
     secondeNum.innerHTML = `${now[2]}`
+
 }  
 
 setInterval(nbhorloge, 100)
