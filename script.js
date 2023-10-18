@@ -21,10 +21,12 @@ function nbhorloge () {
     now.push(date.getHours())
     now.push(date.getMinutes())
     now.push(date.getSeconds())
+    now.push(date.getMilliseconds())
+
 
     heure.style.transform = `rotate(${now[0]*30+(0.5*now[1])}deg)`;
-    minute.style.transform = `rotate(${now[1]*6}deg)`;
-    seconde.style.transform = `rotate(${now[2]*6-180}deg)`;
+    minute.style.transform = `rotate(${now[1]*6+(0.1*now[2])}deg)`;
+    seconde.style.transform = `rotate(${now[2]*6-180+(0.006*now[3])}deg)`;
 
     heureNum.innerHTML = `${now[0]}`
     minuteNum.innerHTML = `${now[1]}`
@@ -32,5 +34,5 @@ function nbhorloge () {
 
 }  
 
-setInterval(nbhorloge, 100)
+setInterval(nbhorloge, 10)
 
