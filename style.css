@@ -122,8 +122,9 @@ body {
 .nombre {
     font-size: 3em;
     color: #39b1fa;
-    text-shadow: white 1px 0 7px;
-
+ /*    text-shadow: white 1px 0 7px; */
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
 
 #nombre12 {
