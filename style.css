@@ -28,8 +28,8 @@ body {
     background-color: white;
     position: absolute;
     margin: auto;
-    width: 23px;
-    height: 23px;
+    width: 30px;
+    height: 30px;
     top: 0;
     left: 0;
     right: 0;
@@ -69,9 +69,9 @@ body {
     background: linear-gradient(to right, black 0%, black 60%, white 50%, white 0%);
     width: 15px;
     height: 170px;
-    top: 15.2%;
-    right: 45.5%;
-    transform-origin: bottom left;
+    top: 16.1%;
+    right: 48.2%;
+    transform-origin: bottom center;
     border-radius: 350px 350px 0px 0px;
 }
 
@@ -80,9 +80,9 @@ body {
     background: linear-gradient(to right, rgb(104, 103, 103) 0%, rgb(104, 103, 103) 60%, white 50%, white 0%);
     width: 7.5px;
     height: 190px;
-    top: 12.6%;
-    right: 48.7%;
-    transform-origin: bottom left;
+    top: 12.1%;
+    right: 49.4%;
+    transform-origin: bottom center;
     border-radius: 350px 350px 0px 0px;
 }
 
